@@ -1,0 +1,57 @@
+.App {
+  padding: 20px 50px 50px 50px;
+  text-align: left;
+}
+.home,
+.login,
+.registro {
+  padding: 40px 20px 20px;
+}
+.home {
+  padding: 40px 35% 20px 35%;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+.photo {
+  padding: 20px 20px 20px 20px;
+  width: 200px;
+  height: 200px;
+}
+.productos {
+  padding: 20px 35% 20px 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.registro,
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-top: 20px;
+  align-items: center;
+  padding: 0% 30% 0% 30%;
+  margin: 3%;
+  width: 100%;
+}
+
+.registro-button {
+  padding: 5%;
+  width: 100%;
+}
+input {
+  width: 100%;
+}
+button {
+  width: 100%;
+}
+label {
+  padding: 10px;
+  display: flex;
+  align-self: flex-start;
+  width: 100%;
+}
