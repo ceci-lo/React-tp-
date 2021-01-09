@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# TP react UTN curso CL
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
