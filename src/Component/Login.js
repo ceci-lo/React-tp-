@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from "react";
+import {useHistory} from "react-router-dom"
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Form from "react-bootstrap/Form";
@@ -9,7 +10,7 @@ function Login() {
     contraseña: "",
   });
   const [spinner, setSpinner] = useState(false);
-
+  const history = useHistory();
   const esValido = useMemo(() => {
     return form.email.length > 0 && form.contraseña.length >= 6;
   }, [form.email, form.contraseña]);
@@ -21,7 +22,8 @@ function Login() {
     firebase.auth
       .signInWithEmailAndPassword(email, contraseña)
       .then((data) => {
-        console.log("Usuario logueado", data.user.uid);
+        console.log("Usuario logueado", data.user.uid)
+        history.push("/home")
       })
       .catch((error) => {
         console.log("Error", error);

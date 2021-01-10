@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Spinner from "react-bootstrap/Spinner";
-
+import Formulario from "../FormComponents/Formulario"
 import "bootstrap/dist/css/bootstrap.min.css";
 import firebase from "../Service/firebase";
 
@@ -68,64 +68,47 @@ function Registro() {
       <h2>Register</h2>
       <div className="registro-component">
         <Form onSubmit={handleSubmit}>
-          <Form.Group>
-            <Form.Label htmlFor="inputPassword5">Name</Form.Label>
-            <Form.Control
-              type="text"
+        <Formulario type="text"
               id="inputPassword5"
-              aria-describedby="passwordHelpBlock"
+              placeholder="Ingrese su Nombre"
               name="nombre"
               value={form.nombre}
-              onChange={handleChange}
-            />
-          </Form.Group>
+              onChange={handleChange}/>
 
           <>
-            <Form.Group>
-              <Form.Label htmlFor="inputPassword5">Lastname</Form.Label>
-              <Form.Control
-                type="text"
-                id="inputPassword5"
-                aria-describedby="passwordHelpBlock"
-                name="apellido"
-                value={form.apellido}
-                onChange={handleChange}
-              />
-            </Form.Group>
+          <Formulario type="text"
+              id="inputPassword5"
+              placeholder="Ingrese su Apellido"
+              name="apellido"
+              value={form.apellido}
+              onChange={handleChange}/>
           </>
           <>
-            <Form.Group>
-              <Form.Label htmlFor="inputPassword5">Email</Form.Label>
-              <Form.Control
-                id="inputPassword5"
-                aria-describedby="passwordHelpBlock"
-                type="email"
-                name="email"
-                value={form.email}
-                onChange={handleChange}
-              />
+          <Formulario type="email"
+              id="inputPassword5"
+              placeholder="Ingrese su Email"
+              name="email"
+              value={form.email}
+              onChange={handleChange}/>
+
               <Form.Text id="passwordHelpBlock" muted>
                 You must register with your email
               </Form.Text>
-            </Form.Group>
+            
           </>
           <>
-            <Form.Group>
-              <Form.Label htmlFor="inputPassword5">Password</Form.Label>
-              <Form.Control
-                type="password"
-                id="inputPassword5"
-                aria-describedby="passwordHelpBlock"
-                name="contraseña"
-                value={form.contraseña}
-                onChange={handleChange}
-              />
+          <Formulario type="password"
+              id="inputPassword5"
+              placeholder="Ingrese su contraseña"
+              name="contraseña"
+              value={form.contraseña}
+              onChange={handleChange}/>
+
               <Form.Text id="passwordHelpBlock" muted>
                 Your password must be 8-20 characters long, contain letters and
                 numbers, and must not contain spaces, special characters, or
                 emoji.
               </Form.Text>
-            </Form.Group>
           </>
           {error && <div>{error}</div>}
           <div className="registro-button">
